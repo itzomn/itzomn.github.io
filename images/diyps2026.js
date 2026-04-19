@@ -1,5 +1,6 @@
-var img;
-var initials ='jm'; // your initials
+var bgimg;
+var img0, img1, img2, img3, img4, img5, img6, img7, img8, img9
+var initials ='ot'; // your initials
 var choice = '1'; // starting choice, so it is not empty
 var screenbg = 250; // off white background
 var lastscreenshot=61; // last screenshot never taken
@@ -8,12 +9,22 @@ function preload() {
 // preload() runs once, it may make you wait
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
-  img = loadImage('https://dma-git.github.io/images/74.png');
+bgimg = loadImage('https://itzomn.github.io//images/lounge.jpg');
+  img0 = loadImage('https://itzomn.github.io/images/cat0.png');
+  img1 = loadImage('https://itzomn.github.io/images/cat1png');
+  img2 = loadImage('https://itzomn.github.io/images/cat2.png');
+  img3 = loadImage('https://itzomn.github.io/images/cat3.png');
+  img4 = loadImage('https://itzomn.github.io/images/cat4.png');
+  img5 = loadImage('https://itzomn.github.io/images/cat5.png');
+  img6 = loadImage('https://itzomn.github.io/images/cat6.png');
+  img7 = loadImage('https://itzomn.github.io/images/cat7.png');
+  img8 = loadImage('https://itzomn.github.io/images/cat8.png');
+  img9 = loadImage('https://itzomn.github.io/images/cat9.png');
 }
 
 function setup() {
-createCanvas(600, 600);  // canvas size
-background(screenbg);   // use our background screen color
+createCanvas(500, 350);  // canvas size
+background(bgimg);   // use our background screen color
 
 }
 
@@ -110,6 +121,10 @@ function saveme(){
   if (second()!=lastscreenshot) { // don't take a screenshot if you just took one
     saveCanvas(filename, 'jpg');
     key="";
+  }
+  lastscreenshot=second(); // set this to the current second so no more than one per second
+  
+}
   }
   lastscreenshot=second(); // set this to the current second so no more than one per second
   
