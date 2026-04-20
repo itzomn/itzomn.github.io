@@ -1,5 +1,4 @@
 var bg;
-var gifs = [];
 var img1, img2, img3, img4, img5, img6, img7, img8, img9, img0;
 var initials ='jm'; // your initials
 var choice = '1'; // starting choice, so it is not empty
