@@ -1,5 +1,6 @@
 var bg;
-var img3, img2;
+var gifs = [];
+var img1, img2, img3, img4, img5, img6, img7, img8, img9, img0;
 var initials ='jm'; // your initials
 var choice = '1'; // starting choice, so it is not empty
 var screenbg = 25; // off white background
@@ -9,9 +10,18 @@ function preload() {
 // preload() runs once, it may make you wait
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
-  bg = loadImage('https://itzomn.github.io/diyps/lounge.jpg');
-  img3 = loadImage('https://itzomn.github.io/diyps/cat3.png');
+    bg = loadImage('https://itzomn.github.io/diyps/lounge.jpg');
+  img1 = loadImage('https://itzomn.github.io/diyps/cat1.gif');
   img2 = loadImage('https://itzomn.github.io/diyps/cat2.png');
+  img3 = loadImage('https://itzomn.github.io/diyps/cat3.png');
+  img4 = loadImage('https://itzomn.github.io/diyps/cat4.png');
+  img5 = loadImage('https://itzomn.github.io/diyps/cat5.png');
+  img6 = loadImage('https://itzomn.github.io/diyps/cat6.png');
+  img7 = loadImage('https://itzomn.github.io/diyps/cat7.png');
+  img8 = loadImage('https://itzomn.github.io/diyps/cat8.png');
+  img9 = loadImage('https://itzomn.github.io/diyps/cat9.png');
+  img0 = loadImage('https://itzomn.github.io/diyps/cat0.png');
+  
 }
 
 function setup() {
@@ -35,15 +45,37 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   // just make sure each key option has the a stroke or fill and then what type of 
   // graphic function
 
- if (toolChoice == '1' ) {  // first tool
-   
+ imageMode(CENTER);
+
+if (toolChoice == '1') {  // first tool
     image(img3, mouseX, mouseY, 50, 50);
-  
+    
   } else if (toolChoice == '2' || toolChoice == '2') { // g places the image we pre-loaded
     image(img2, mouseX, mouseY, 50, 50);
    
    } else if (toolChoice == '3' || toolChoice == '3') { // o places the image we pre-loaded
-    image(img3, mouseX, mouseY, 50, 50);
+    image(img4, mouseX, mouseY, 50, 50);
+    
+       } else if (toolChoice == '4' || toolChoice == '3') { // o places the image we pre-loaded
+    image(img5, mouseX, mouseY, 50, 50);
+    
+       } else if (toolChoice == '5' || toolChoice == '3') { // o places the image we pre-loaded
+    image(img6, mouseX, mouseY, 50, 50);
+    
+       } else if (toolChoice == '6' || toolChoice == '3') { // o places the image we pre-loaded
+    image(img7, mouseX, mouseY, 50, 50);
+    
+       } else if (toolChoice == '7' || toolChoice == '3') { // o places the image we pre-loaded
+    image(img8, mouseX, mouseY, 50, 50);
+    
+       } else if (toolChoice == '8' || toolChoice == '3') { // o places the image we pre-loaded
+    image(img0, mouseX, mouseY, 50, 50);
+    
+       } else if (toolChoice == '9' || toolChoice == '3') { // o places the image we pre-loaded
+    image(img9, mouseX, mouseY, 50, 50);
+    
+       } else if (toolChoice == '0' || toolChoice == '3') { // o places the image we pre-loaded
+    image(img1, mouseX, mouseY, 50, 50);
     
   }
  }
