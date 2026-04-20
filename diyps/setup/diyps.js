@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h1>fill up the lounge with kitties!</h1>
-<p> use the number keys to select a cat and place them anywhere you desire! click p to save your image!</p>
-
-<iframe src="diyps/index.html" height="605" width="605" title="kitty"></iframe>
-<pre>
-
 var bg;
 var gifs = [];
 var img1, img2, img3, img4, img5, img6, img7, img8, img9, img0;
