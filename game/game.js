@@ -10,10 +10,21 @@ function preload() {
 // preload() runs once, it may make you wait
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
-    bg = loadImage('https://itzomn.github.io/diyps/lounge.jpg');
-  img1 = loadImage('https://itzomn.github.io/diyps/cat1.gif');
-  img2 = loadImage('https://itzomn.github.io/diyps/cat2.png');
-  img3 = loadImage('https://itzomn.github.io/diyps/cat3.png');
+    bg = loadImage('https://itzomn.github.io/game/ears.jpg');
+    bg1 = loadImage('https://itzomn.github.io/diyps2/lounge.jpg');
+    bg2 = loadImage('https://itzomn.github.io/game/cute.jpg');
+    bg3 = loadImage('https://itzomn.github.io/game/space.jpg');
+    bg4 = loadImage('https://itzomn.github.io/game/stars.jpg');
+    bg5 = loadImage('https://itzomn.github.io/game/wawa.jpg');
+    bg6 = loadImage('https://itzomn.github.io/game/hearts.jpg');
+    bg7 = loadImage('https://itzomn.github.io/game/yay.jpg');
+ //=================================================================
+  img1 = loadImage('https://itzomn.github.io/diyps2/cat1.gif');
+  img2 = loadImage('https://itzomn.github.io/game/cat-pop.gif');
+  img3 = loadImage('https://itzomn.github.io/game/cutie-cute.gif');
+  img4 = loadImage('https://itzomn.github.io/game/cat-twerk.gif');
+  img5 = loadImage('https://itzomn.github.io/game/wawa.gif');
+  img6 = loadImage('https://itzomn.github.io/game/jumps.gif');
 }
 
 function setup() {
@@ -41,7 +52,18 @@ background(bg);
   if(gameState=="L3"){
     levelThree();
   }
+  
+  if(gameState=="L4"){
+  levelFour();
+}
 
+if(gameState=="L5"){
+  levelFive();
+}
+
+if(gameState=="L6"){
+  levelSix();
+}
   if(gameState=="you win!"){
     levelWin();
   }
@@ -54,7 +76,8 @@ background(bg);
 } // end of draw ==============================================
   
   function levelIntro(){
-  text("haia! press a key to play!", width/2, height-20);
+  background(bg);
+  text("haia! press any key to play!", width/2, height/2);
 
   if(keyIsPressed){
     gameState = "L1";
@@ -62,6 +85,7 @@ background(bg);
 }
 
 function levelOne(){
+  background(bg1);
   text("Level 1", width/2,height-20);
   var distToBall = dist(ballx, bally, mouseX, mouseY);
   if(distToBall<ballSize/2){
@@ -76,12 +100,12 @@ function levelOne(){
   
   //ellipse(ballx, bally, ballSize);
   line(ballx, bally, mouseX, mouseY);
-  image(img3, ballx-ballSize/2, bally-ballSize/2, ballSize, ballSize);
+  image(img1, ballx-ballSize/2, bally-ballSize/2, ballSize, ballSize);
   
 } // end of level 1 ===============================
 
 function levelTwo(){
-  //background(200,0,0);
+  background(bg2);
   text("Level 2!", width/2,height-20);
   var distToBall = dist(ballx, bally, mouseX, mouseY);
   if(distToBall<ballSize/2){
@@ -101,8 +125,70 @@ function levelTwo(){
 } // end of level 2 ==============================
 
 function levelThree(){
- // background(0,100,200);
+  background(bg3);
+  fill(255); // white text
   text("Level 3!", width/2,height-20);
+  var distToBall = dist(ballx, bally, mouseX, mouseY);
+  if(distToBall<ballSize/2){
+    ballx=random(width);
+    bally=random(height);
+    score=score+1;
+  }  
+  
+  if(score>=15){
+    gameState="L4";
+  }
+  
+  //line(ballx, bally, mouseX, mouseY);
+  //ellipse(ballx, bally, ballSize);
+  image(img3, ballx-ballSize/2, bally-ballSize/2, ballSize, ballSize);
+  
+} // end of level 3 ==============================
+
+function levelFour(){
+  background(bg4);
+  text("Level 4!", width/2,height-20);
+  var distToBall = dist(ballx, bally, mouseX, mouseY);
+  if(distToBall<ballSize/2){
+    ballx=random(width);
+    bally=random(height);
+    score=score+1;
+  }  
+  
+  if(score>=20){
+    gameState="L5";
+  }
+  
+  //line(ballx, bally, mouseX, mouseY);
+  //ellipse(ballx, bally, ballSize);
+  image(img4, ballx-ballSize/2, bally-ballSize/2, ballSize, ballSize);
+  
+} // end of level 4 ==============================
+
+function levelFive(){
+  background(bg5);
+  fill(0); // white text
+  text("Level 5!", width/2,height-20);
+  var distToBall = dist(ballx, bally, mouseX, mouseY);
+  if(distToBall<ballSize/2){
+    ballx=random(width);
+    bally=random(height);
+    score=score+1;
+  }  
+  
+  if(score>=25){
+    gameState="L6";
+  }
+  
+  //line(ballx, bally, mouseX, mouseY);
+  //ellipse(ballx, bally, ballSize);
+  image(img5, ballx-ballSize/2, bally-ballSize/2, ballSize, ballSize);
+  
+} // end of level 5 ==============================
+
+function levelSix(){
+  background(bg6);
+  text("Level 6!", width/2,height-20);
   var distToBall = dist(ballx, bally, mouseX, mouseY);
   if(distToBall<ballSize/2){
     ballx=random(width);
@@ -111,22 +197,35 @@ function levelThree(){
     ballSize=ballSize-1;
   }  
   
-  if(score>=50){
+  if(score>=30){
     //you have won
     gameState="you win!";
-    //level 4
-    //gameState="L4";
+    //level 6
+    //gameState="L6";
   }
   
   //line(ballx, bally, mouseX, mouseY);
   //ellipse(ballx, bally, ballSize);
-  image(img1, ballx-ballSize/2, bally-ballSize/2, ballSize, ballSize);
+  image(img6, ballx-ballSize/2, bally-ballSize/2, ballSize, ballSize);
   
-} // end of level 3 ==============================
+} // end of level 6 ==============================
 
 function levelWin(){
   
-  //background(200,0,0);
-  text("yay! you win!", width/2,height-20);
+   background(bg7);
+  text("yay! you win! press r to replay!", width/2,height/2);
  
-  }  
+  }  // level reset
+  
+  function resetLevel(){
+  ballx = random(width);
+  bally = random(height);
+  ballSize = 40;
+}
+function keyPressed(){
+  if(key == "r"){
+    resetLevel();
+    score = 0;
+    gameState = "L1";
+  }
+}
