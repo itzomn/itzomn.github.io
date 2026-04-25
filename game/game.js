@@ -77,12 +77,8 @@ if(gameState=="L6"){
   
   function levelIntro(){
   background(bg);
-  text("haia! press any key to play!", width/2, height/2);
-
-  if(keyIsPressed){
-    gameState = "L1";
+  text("haia! tap anywhere to play!", width/2, height/2);
   }
-}
 
 function levelOne(){
   background(bg1);
@@ -226,6 +222,20 @@ function keyPressed(){
   if(key == "r"){
     resetLevel();
     score = 0;
+    gameState = "L1";
+  }
+}
+
+function mousePressed(){
+  startGame();
+}
+
+function touchStarted(){
+  startGame();
+}
+
+function startGame(){
+  if(gameState == "intro"){
     gameState = "L1";
   }
 }
