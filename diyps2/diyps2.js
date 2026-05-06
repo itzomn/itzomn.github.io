@@ -9,17 +9,17 @@ function preload() {
 // preload() runs once, it may make you wait
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
-    bg = loadImage('https://itzomn.github.io/diyps/lounge.jpg');
-  img1 = loadImage('https://itzomn.github.io/diyps/cat1.gif');
-  img2 = loadImage('https://itzomn.github.io/diyps/cat2.png');
-  img3 = loadImage('https://itzomn.github.io/diyps/cat3.png');
-  img4 = loadImage('https://itzomn.github.io/diyps/cat4.png');
-  img5 = loadImage('https://itzomn.github.io/diyps/cat5.png');
-  img6 = loadImage('https://itzomn.github.io/diyps/cat6.png');
-  img7 = loadImage('https://itzomn.github.io/diyps/cat7.png');
-  img8 = loadImage('https://itzomn.github.io/diyps/cat8.png');
-  img9 = loadImage('https://itzomn.github.io/diyps/cat9.png');
-  img0 = loadImage('https://itzomn.github.io/diyps/cat0.png');
+    bg = loadImage('https://itzomn.github.io/diyps2/lounge.jpg');
+  img1 = loadImage('https://itzomn.github.io/diyps2/cat1.gif');
+  img2 = loadImage('https://itzomn.github.io/diyps2/cat2.png');
+  img3 = loadImage('https://itzomn.github.io/diyps2/cat3.png');
+  img4 = loadImage('https://itzomn.github.io/diyps2/cat4.png');
+  img5 = loadImage('https://itzomn.github.io/diyps2/cat5.png');
+  img6 = loadImage('https://itzomn.github.io/diyps2/cat6.png');
+  img7 = loadImage('https://itzomn.github.io/diyps2/cat7.png');
+  img8 = loadImage('https://itzomn.github.io/diyps2/cat8.png');
+  img9 = loadImage('https://itzomn.github.io/diyps2/cat9.png');
+  img0 = loadImage('https://itzomn.github.io/diyps2/cat0.png');
   
 }
 
