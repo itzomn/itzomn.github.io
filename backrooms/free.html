@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>freedom?</title>
- <link rel="icon" type="image/jpg" href="end1.jpg"
+  <title>freedom?</title>
+
+  <link rel="icon" type="image/jpg" href="end1.jpg">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      background-color: #998D6D;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
 </head>
-<body style="background-color:#998D6D;">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-</head>
 
-<h1 style="color:black; Georgia, serif; text-align:center">is this finally the end?</h1>
+<body>
 
-<img src="end1.jpg" alt="door" style="width:500px;height:400px;">
+<h1 style="color:black; font-family: Georgia, serif; text-align:center">
+  am i finally free?
+</h1>
 
-<p style="text-align:center; Georgia, serif;">
-  <a href="death.html" style="color:blue; margin:0 10px;">im finally free..!</a>
-</p>
+<!-- Clickable image -->
+<img src="end1.jpg"
+     alt="door"
+     usemap="#image-map"
+     style="width:500px;height:400px;">
+
+<!-- Clickable area -->
+<map name="image-map">
+  <area target="_self"
+        alt="freedom..!"
+        title="freedom..!"
+        href="death.html"
+        coords="217,139,291,197"
+        shape="rect">
+</map>
+
+</body>
+</html>

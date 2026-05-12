@@ -1,30 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>oh no..</title>
- <link rel="icon" type="image/jpg" href="2doors.jpg"
+  <title>oh no..</title>
+
+  <link rel="icon" type="image/jpg" href="2doors.jpg">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      background-color: #030303;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
 </head>
-<body style="background-color:#030303;">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-</head>
 
-<h1 style="color:white; font-family: Georgia, serif; text-align:center">what is this..</h1>
+<body>
 
-<p style="text-align:center; color:white; font-family: Georgia, serif;">which door should i choose?..</p>
+<h1 style="color:white; font-family: Georgia, serif; text-align:center">
+  what is this..
+</h1>
 
-<img src="2doors.jpg" alt="fate" style="width:400px;height:400px;">
-
-<p style="text-align:center; font-family: Georgia, serif;">
-  <a href="leftdoor1.html" style="color:#0E1FCC; margin:0 10px;">left door</a>
+<p style="text-align:center; color:white; font-family: Georgia, serif;">
+  which door should i choose?..
 </p>
 
-<p style="text-align:center; font-family: Georgia, serif;">
-  <a href="rightdoor1.html" style="color:#8F0101; margin:0 10px;">right door</a>
-</p>
+<!-- Clickable image -->
+<img src="2doors.jpg"
+     alt="fate"
+     usemap="#image-map"
+     style="width:400px;height:400px;">
+
+<!-- Clickable areas -->
+<map name="image-map">
+
+  <!-- Left door -->
+  <area target="_self"
+        alt="this one?"
+        title="this one?"
+        href="leftdoor1.html"
+        coords="144,271,94,144"
+        shape="rect">
+
+  <!-- Right door -->
+  <area target="_self"
+        alt="or.. this one?"
+        title="or.. this one?"
+        href="rightdoor1.html"
+        coords="253,142,307,268"
+        shape="rect">
+
+</map>
+
+</body>
+</html>

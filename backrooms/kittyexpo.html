@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>kitty</title>
+
+<style>
+  body {
+    text-align: center;
+    font-family: Georgia, serif;
+    background-color: black;
+    color: white;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  .image-container {
+    width: 400px;
+    height: 400px; /* fixed frame size */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* keeps images inside box */
+  }
+
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* keeps full image visible without stretching */
+  }
+
+ button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #D998BD;
+  color: white;        /* makes text visible */
+  border: none;        /* optional: removes border */
+  cursor: pointer;     /* makes it feel clickable */
+}
+  }
+</style>
+</head>
+
+<body style="background-color:#D998BD;">
+
+<h2></h2>
+
+<div class="image-container">
+  <img id="slide" src="kitty2.jpg">
+</div>
+
+<br>
+
+<button onclick="prev()">⬅</button>
+<button onclick="next()">➡</button>
+
+<script>
+  var images = ["kitty2.jpg", "kitty1.jpg", "kitty3.jpg", "kitty6.jpg", "kitty4.jpg", "kitty0.jpg", "kitty5.jpg"];
+  var index = 0;
+
+  function showImage() {
+    document.getElementById("slide").src = images[index];
+  }
+
+  function next() {
+    index = (index + 1) % images.length;
+    showImage();
+  }
+
+  function prev() {
+    index = (index - 1 + images.length) % images.length;
+    showImage();
+  }
+</script>
+
+ <link rel="icon" type="image/jpg" href="kitty2.jpg"
+
+</body>
+
+<p style="text-align:center; font-family: Georgia, serif;">
+  <a href="pool.html" style="color:black; margin:0 10px;">what's next?</a>
+</p>
+
+</html>

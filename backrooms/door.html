@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>oh no..</title>
- <link rel="icon" type="image/jpg" href="windows4.jpg"
+  <title>oh no..</title>
+
+  <link rel="icon" type="image/jpg" href="windows4.jpg">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      background-color: #B8B8A7;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
 </head>
-<body style="background-color:#B8B8A7;">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-</head>
 
-<h1 style="color:black; Georgia, serif; text-align:center">not another door..</h1>
+<body>
 
-<img src="windows4.jpg" alt="door" style="width:450px;height:400px;">
+<h1 style="color:black; font-family: Georgia, serif; text-align:center">
+  not another door..
+</h1>
 
-<p style="text-align:center; Georgia, serif;">
-  <a href="theend.html" style="color:blue; margin:0 10px;">no choice..</a>
-</p>
+<!-- Clickable image -->
+<img src="windows4.jpg"
+     alt="door"
+     usemap="#image-map"
+     style="width:450px;height:400px;">
+
+<!-- Clickable area -->
+<map name="image-map">
+  <area target="_self"
+        alt="enter"
+        title="enter"
+        href="theend.html"
+        coords="174,129,282,281"
+        shape="rect">
+</map>
+
+</body>
+</html>
