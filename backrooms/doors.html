@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>choose your fate.</title>
+
+  <link rel="icon" type="image/jpg" href="4door.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      background-color: #171717;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1 style="color:white; font-family: Georgia, serif; text-align:center">
+ this is it..
+</h1>
+
+<p style="text-align:center; color:white; font-family: Georgia, serif;">
+  my fate depends on the correct door..
+</p>
+
+<!-- Clickable image -->
+<img src="4door.png"
+     alt="fate"
+     usemap="#image-map"
+     style="width:500px;height:300px;">
+
+<!-- Clickable areas -->
+<map name="image-map">
+
+  <!-- door#1 -->
+  <area target="_self"
+        alt="door#1"
+        title="eenie"
+        href="death.html"
+        coords="66,57,120,224"
+        shape="rect">
+
+  <!-- door#2 -->
+  <area target="_self"
+        alt="door#2"
+        title="meenie"
+        href="surprise.html"
+        coords="187,56,243,224"
+        shape="rect">
+
+  <!-- door#3 -->
+  <area target="_self"
+        alt="door#3"
+        title="minnie"
+        href="escape.html"
+        coords="304,58,359,225"
+        shape="rect">
+
+  <!-- door#4 -->
+  <area target="_self"
+        alt="door#4"
+        title="mo"
+        href="index.html"
+        coords="421,57,476,225"
+        shape="rect">
+
+</map>
+
+</body>
+</html>
